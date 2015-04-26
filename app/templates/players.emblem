@@ -6,7 +6,7 @@ form.add-roster-player-form submit="addPlayer"
     = input value=newPlayerName placeholder="Enter Player Name"
     label What's the name of the player?
 
-  if playerName
+  if newPlayerName
     .field.row
       .col-50
         = input value=contactEmail placeholder="Contact Email"
