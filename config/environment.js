@@ -25,6 +25,17 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV.contentSecurityPolicy = {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self' http://fonts.gstatic.com http://code.ionicframework.com http://christiannaths.com",
+      'connect-src': "'self'",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com http://code.ionicframework.com http://christiannaths.com",
+      'media-src': "'self'"
+    }
+    EmberENV = {FEATURES: {'ember-document-title': true}};
   }
 
   if (environment === 'test') {

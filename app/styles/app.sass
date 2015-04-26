@@ -1,0 +1,86 @@
+@import "helpers"
+@import "setup/base"
+@import "components/forms"
+
+body
+  color: $neutral-medium
+
+main
+  margin: 0 auto
+  max-width: 30em
+
+header
+  padding: 1.5em
+  margin-bottom: 1.5em
+  color: white
+  background: $neutral-dark
+
+  a
+    color: inherit
+
+  nav li
+    display: inline
+
+    a
+      display: inline-block
+      padding: 0.375em 0.5em
+
+main
+  ul,
+  ol
+    list-style: none
+
+  li
+    padding: 0.75em 0
+
+  li + li
+    border-top: 1px solid $neutral-light
+
+
+.row
+  margin-left: -1em
+
+.col-50
+  width: 50%
+  float: left
+  padding-left: 1em
+
+
+.add-roster-player-form
+  margin: 3em 0
+
+.roster
+  margin: 3em 0
+  border: 2px solid $neutral-medium
+  border-width: 2px 0
+
+.roster-player
+  @extend %clearfix
+
+.roster-player--image
+  font-size: 48 / 16 * 1em
+  padding: (0 / 64 * 1em) (16 / 64 * 1em)
+  color: $neutral-medium
+  background-color: $neutral-light
+  width: 1.25em
+  float: left
+
+.roster-player--details
+  float: left
+  padding: (0 / 16 * 1em) (16 / 16 * 1em)
+
+.roster-player--name
+  font-size: 24 / 16 * 1em
+  font-weight: bold
+
+
+.roster-player--placeholder
+  opacity: 0.5
+
+  .roster-player--details
+    font-family: "Redacted Script"
+
+  .roster-player--contacts
+
+.roster-player--new-player
+  opacity: 0.5

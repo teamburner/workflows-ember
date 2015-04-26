@@ -1,0 +1,11 @@
+header
+  h1 #{appName}
+
+  nav: ul
+    li: link-to "about"
+     | About
+    li: link-to "players"
+     | Players
+
+
+main= outlet

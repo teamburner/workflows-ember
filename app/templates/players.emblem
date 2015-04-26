@@ -1,0 +1,40 @@
+h2 Player Roster
+p Setup your team by adding players
+
+form.add-roster-player-form submit="addPlayer"
+  .field
+    = input value=newPlayerName placeholder="Enter Player Name"
+    label What's the name of the player?
+
+  if playerName
+    .field.row
+      .col-50
+        = input value=contactEmail placeholder="Contact Email"
+        label Add a contact email address.
+      .col-50
+        = input value=contactName placeholder="Contact Name"
+        label If different from above, what's the name of this contact?
+
+  = input type="submit" value="Add"
+
+ul.roster
+  if newPlayerName
+    li.roster-player.roster-player--new-player
+      .roster-player--image
+        span.ion-person
+      .roster-player--details
+        h1.roster-player--name = newPlayerName
+        .roster-player--contacts 0 contacts
+
+  each player in this.sortedPlayers
+    li.roster-player.roster-player class="player-{{ player.id }}"
+      .roster-player--image
+        span.ion-person
+      .roster-player--details
+        h1.roster-player--name= player.name
+        .roster-player--contacts
+          span.ion-person-add
+          | &nbsp;0 contacts
+
+  else
+    li.roster-player.roster-player--placeholder No players yet...
