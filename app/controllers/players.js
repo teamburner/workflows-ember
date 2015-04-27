@@ -17,7 +17,13 @@ export default Ember.ArrayController.extend({
       });
 
       this.set('newPlayerName', "");
+
       player.save();
+
+
+      // this.store.find('player', { email: "foo@bar.ca" }).then(function(player) {
+      //   post.set('author', user);
+      // });
     }
   }
 });

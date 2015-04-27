@@ -1,11 +1,11 @@
 header
   h1 #{appName}
+  h3 A little Ember app to build and test workflows
 
   nav: ul
-    li: link-to "about"
-     | About
     li: link-to "players"
-     | Players
+     | Players/Contacts
+
 
 
 main= outlet
